@@ -1,10 +1,6 @@
 /**
  * Created by vanessamnoble on 12/19/16.
  */
-/**
- * Created by vanessamnoble on 12/8/16.
- */
-"use strict";
 
 
 //the game
@@ -105,8 +101,7 @@ function removeClicks() {
     $('.square').unbind();
 
 }
-
-
+//when starting a new game execute the following
 function startGame() {
     removeClicks();
     resetGame();
@@ -114,10 +109,9 @@ function startGame() {
     addPattern();
     playPattern();
 }
-
+//resets game and games the header tag to good luck
 function resetGame() {
     level = 0;
-
     $('#level').html('Level: ' + level);
     $('h3').html('Good Luck').css({
         fontSize: 42,
@@ -125,12 +119,9 @@ function resetGame() {
         borderColor: "transparent",
         paddingTop: 0,
         fontFamily:'Jura, sans-serif',
-
     });
     $('p').html('Click anywhere on circle to Start Game');
-
 }
-
 //start game when middle circle is clicked
 $('#middleCircle').click(function() {
     $('.square').show();
@@ -141,7 +132,7 @@ $('#middleCircle').click(function() {
         startGame();
     }
 });
-//x
+
 function randNum(min, max) {
     return Math.round(Math.random() * (max - min)) + min;
 }
